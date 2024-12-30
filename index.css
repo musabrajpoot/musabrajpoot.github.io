@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    min-height: 200vh;
+}
+header{
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+header.Sticky
+{
+    padding: 15px 100px;
+    background:  #fff;
+
+}
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+header ul li a:hover{
+    color: gray;
+}
+
+header.Sticky ul li a{
+    color: black;
+    font-weight: bold;
+}
+header.Sticky .logo{
+    color: black;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    line-height: 80px;
+    /* float: right; */
+    margin: -10px -60px 0 0;
+    display: none;
+
+}
+#check{
+    display: none;
+}
+
+@media screen and (max-width : 1024px) {
+    header ul li{
+        display: contents;
+    }
+    header .logo{
+        margin-left: -90px;
+        font-size: 1.5em;
+    }
+    .img-section{
+        display: none;
+    }
+    
+
+    
+}
+/* 
+@media screen and (max-width: 858px){
+    .checkbtn{
+        display: contents;
+        margin: -10px -60px 0 0;
+    }
+    header ul li{
+        display: none;
+    }
+    .checkbtn i{
+        margin-right: -80px;
+        margin-top: -10px;
+    }
+
+    header ul{
+        position: fixed;
+        width: 100%;
+        height: 100v;
+        background: gray;
+        top: 80px;
+        left: -100;
+        text-align: center;
+        transition: all .5s;
+    }
+    header ul li{
+        display: block;
+
+    }
+    header ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+} */
+
+
+
+
+@media screen and (max-width: 858px) {
+
+    header ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: gray;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    header ul li {
+        margin: 20px 0;
+    }
+
+    header ul li a {
+        font-size: 20px;
+    }
+
+    header .checkbtn {
+        display: block;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+        
+    }
+    header.Sticky .checkbtn i{
+        color: #000000;
+    }
+    .img-section{
+        display: none;
+    }
+}
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+   background-size: cover;
+   /* background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%); */
+   background-color: #2d3436;
+   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+.Stranger{
+    word-spacing: 5px;
+    background-color: gray;
+    width: 350px;
+}
+.Stranger p{
+    font-size: 30px;
+    
+}
+.introduction{
+    margin: 250px 0 0 150px;
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+
+}
+.introduction h1{
+    font-weight: bolder;
+    font-size: 60px;
+    /* width: 400px; */
+}
+/* Animation text code here */
+.animation{
+    font-size: 30px;
+    font-weight: bold;
+}
+.freelancer{
+    background-color: gray;
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+@media (max-width: 858px){
+    .introduction{
+       
+        margin: 250px 0 0 30px;
+        position: absolute;
+    }
+    .introduction h1{
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    .Stranger{
+        word-spacing: 2px;
+        background-color: gray;
+        width: 250px;
+    }
+    .Stranger p{
+        font-size: 20px;
+        
+    }
+    .animation{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .freelancer{
+        background-color: gray;
+        color: #000000;
+        font-size: 15px;
+        font-weight: bold;
+    
+    }
+    .banner{
+        height: 70vh;
+    }
+    .btn-hover{
+        width: 100px;
+    }
+
+}
+
+/* buttons */
+
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+/* Media Quries for home page */
+/* @media screen and (max-width: 924px) {
+    .img-section{
+        display: none;
+    }
+    .header ul li{
+        display: none;
+    }
+  }
+
+@media screen and (max-width: 774px){
+    header, header .Sticky ul li a{
+        display: block;
+    }
+} */
+
+
+/* Image Section */
+.img-section{
+    width: 450px;
+    height: 500px;
+    margin: 150px 0 0 900px;
+    position: absolute;
+    border-radius: 23% 77% 23% 77% / 71% 32% 68% 29%;
+}
+.img-section img{
+    width: 450px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 23% 77% 23% 77% / 71% 32% 68% 29%;
+    border: 10px solid rgb(255, 255, 255);
+
+}
+
+
+
+.About-one{
+    display: inline-block;
+}
+.About-one h3{
+    margin: 150px 0 0 200px;
+    font-size: 30px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+.About-one h1{
+    margin: 10px 0 0 200px;
+    font-size: 30px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+.About-one img{
+    margin-left: 200px;
+    margin-top: 40px;
+    width: 450px;
+    height: 500px;
+    overflow: hidden;
+    /* border-radius: 12% 88% 14% 86% / 93% 16% 84% 7%; */
+    border-radius: 40px;
+    border: 5px solid rgb(2, 2, 2);
+
+}
+
+.About-two{
+    width: 500px;
+    height: 300px;
+    float: inline-end;
+    margin: 250px 150px 0 0 ;
+    font-size: 16px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+.About-two h1{
+    font-size: 20px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+/* About page Media Quires */
+
+@media (max-width: 750px){
+    .About-one h3, .About-one h1{
+        margin-left: 30px;
+        justify-content: center;
+    }
+    .About-one img{
+        margin-left: 20px;
+        width: 350px;
+        height: 400px;
+    }
+
+    .About-two{
+        width: 300px;
+        height: 300px;
+        margin-right: 50px;
+        margin-top: 40px;
+    }
+}
+
+
+
+/* Education Part */
+
+.Education-one{
+    display: inline-block;
+}
+.Education-one h1{
+    margin: 150px 0 0 200px;
+    font-size: 40px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+/* University */
+
+.education-item {
+    border-left: 4px solid #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+    margin-top: 60px;
+}
+
+.education-item h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    font-size: 25px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+.education-item h4 {
+    font-size: 20px;
+    color: #2f2f2f;
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+.education-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+
+/* collage */
+.education-item2 {
+    border-left: 4px solid #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+    margin-top: 60px;
+    /* background-color: #2b2b2b; */
+}
+
+.education-item2 h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    font-size: 25px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+.education-item2 h4 {
+    font-size: 20px;
+    color: #2f2f2f;
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+.education-item2 p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* School */
+
+
+.education-item3 {
+    border-left: 4px solid #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+    margin-top: 60px;
+    /* background-color: #2b2b2b; */
+}
+
+.education-item3 h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    font-size: 25px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+.education-item3 h4 {
+    font-size: 20px;
+    color: #2f2f2f;
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+.education-item3 p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+
+
+
+
+/* Education part media quries */
+
+@media (max-width: 750px){
+    .Education-one h1{
+        margin-left: 30px;
+        margin-top: 500px;
+    }
+    .education-item ,.education-item h3,.education-item h4 ,.education-item p,.education-item2 ,.education-item2 h3,.education-item2 h4 ,.education-item2 p,.education-item3 ,.education-item3 h3,.education-item3 h4 ,.education-item3 p{
+        margin-left: 30px ;
+    }
+
+}
+
+
+.Service{
+    margin-left: 650px;
+    margin: 150px 0 0 200px;
+    font-size: 40px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: 130px;
+    margin-top: 150px;
+    padding: 10px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #dcdcdc;
+    /* background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
+    transition: left 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.card:hover::before {
+    left: 0;
+}
+
+.card-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    z-index: 5;
+    font-size: x-large;
+}
+
+.card-title {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #333;
+    z-index: 2;
+    font-size: 20px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #777;
+    margin: 0 0 20px;
+    z-index: 2;
+}
+
+.card-link {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.card-link i {
+    margin-left: 5px;
+    transition: margin-left 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.card-link:hover i {
+    margin-left: 10px;
+    color: white;
+}
+
+@media (max-width: 750px) {
+    .card-container{
+        margin-left: 25px;
+    }
+    .card {
+        width: calc(50% - 20px); /* Two cards in one row */
+    }
+    .Service{
+        margin-left: 30px;
+            
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* One card in one row */
+    }
+}
+
+
+/* Projects */
+
+.Project{
+    margin-top: 150px;
+    margin-left: 650px;
+    margin: 150px 0 0 200px;
+    font-size: 40px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+
+.Project-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: 130px;
+    margin-top: 150px;
+    padding: 10px;    
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+.card-content button{
+    
+
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    font-size: 14px;
+    height: 38px;
+    padding: 8px 24px;
+    border-radius: 50px;
+    background-image: linear-gradient(180deg,#030303,#444447);
+    box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+    transition: all .2s ease-out;
+}
+.card-content button:hover{
+    box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%), 0 4px 6px 0 rgb(93 100 148 / 20%);
+
+   
+}
+
+@media (max-width: 750px) {
+    .Project-container{
+        margin-left: 25px;
+    }
+    .project-card {
+        width: calc(50% - 20px); /* Two cards in one row */
+    }
+    .Project{
+        margin-left: 30px;
+            
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card{
+        width: 100%; /* One card in one row */
+    }
+}
+
+
+.Contact{
+    margin-left: 650px;
+    margin: 150px 0 0 200px;
+    font-size: 40px;
+    font-family: 'georgia';
+    font-weight: 700;
+}
+.Google-Map iframe{
+    margin-top: 50px;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    
+}
+
+
+@media (max-width: 750px){
+    .Contact{
+        margin-left: 30px;
+        font-size: 30px;
+    }
+}
+
+
+/* Contact form */
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+
+.contact-info {
+    background: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    color: white;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.contact-info p {
+    margin: 10px 0 30px;
+    font-size: 1em;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+}
+
+.contact-form {
+    padding: 30px;
+    flex: 2;
+    min-width: 300px;
+}
+
+.contact-form h2 {
+    margin: 0 0 20px;
+    font-size: 1.5em;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form .form-group input[type="text"],
+.contact-form .form-group input[type="email"] {
+    flex: 1;
+}
+
+.contact-form .form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button {
+    background: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(315deg, #45494b 0%, #1e1c1c 74%);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        min-width: 100%;
+    }
+}
+
+.footer{
+    text-align: center;
+    width: 100%;
+    bottom: 0;  
+    margin-top: 100px;
+}
+.footer hr{
+    width: 100%;
+    font-size: 10px;
+}
+
